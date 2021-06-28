@@ -1,6 +1,10 @@
 html{
   box-sizing: border-box;
 }
+html,
+body {
+	height: 100%;
+}
 
 *,
 *::before, 
@@ -22,6 +26,7 @@ li{
 }
 
 body {
+  overflow-x: hidden;
   font-family: 'Roboto-Regular', sans-serif;
   font-style: 15px;
   font-weight: 400;
@@ -33,6 +38,18 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0px 15px;
+}
+
+.wrapper{
+  display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
 }
 
 .container-fluid {
@@ -63,6 +80,18 @@ body {
   }
   display: inline-block;
   margin-right: 13px;
+}
+.angle-right{
+  position: relative;
+  padding-left: 15px;
+  &::before{
+    content: "\f105";
+    position: absolute;
+    font-family: "icomoon";
+    left: 0;
+    color: $green;
+    font-size: 14px;
+  }
 }
 
 // .slick-slide {
